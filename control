@@ -6,4 +6,4 @@ Description: Colorize your icon labels!
 Maintainer: hearse
 Author: hearse
 Section: Tweaks
-Depends: mobilesubstrate (>= 0.9.5000)
+Depends: mobilesubstrate (>= 0.9.5000), preferenceloader, ws.hbang.common (>= 1.15.1)

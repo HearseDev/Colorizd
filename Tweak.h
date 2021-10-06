@@ -1,5 +1,8 @@
 #include <colorizd-Swift.h>
+#import <Cephei/HBPreferences.h>
 
+HBPreferences *preferences;
+static BOOL enabled;
 static UIImage *iconImage;
 @interface SBIconImageView
 @end

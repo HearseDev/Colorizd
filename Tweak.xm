@@ -1,5 +1,6 @@
 #include "Tweak.h"
 
+%group Colorizd
 
 %hook SBIconImageView
 - (id)contentsImage {
@@ -58,3 +59,13 @@
 }
 
 %end
+
+%end // Colorizd Group
+
+
+%ctor {
+    preferences = [[HBPreferences alloc] initWithIdentifier:@"im.hearse.colorizdprefs"];
+    [preferences registerBool:&enabled default:YES forKey:@"enabled"];
+
+    if ([preferences boolForKey:@"enabled"]) %init(Colorizd);
+}
